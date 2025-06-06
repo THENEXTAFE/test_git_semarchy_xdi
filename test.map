@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map:map xmlns:map="http://www.indy.com/v2/map" id="_-HunMEj3Ee-rxcUE0wMtag" internalVersion="8" tech="resource.tech#_waYSMH8VEd2__Mzb_dB76A?fileId=_waYSMH8VEd2__Mzb_dB76A$type=tech$name=flow?">
   <hint/>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation " xmi:id="_sndZ4EK3EfCUOZaSvDz28w" type="Map" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_tCQfgEK3EfCUOZaSvDz28w" type="Note" fontName="Segoe UI" description="jy-jyj" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_tCSUsEK3EfCUOZaSvDz28w" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_tCSUsUK3EfCUOZaSvDz28w" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:TextStyle" xmi:id="_tCQfgUK3EfCUOZaSvDz28w"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_tCQfgkK3EfCUOZaSvDz28w"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tCQfg0K3EfCUOZaSvDz28w" x="161" y="135"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_sndZ4UK3EfCUOZaSvDz28w"/>
+  <element xmi:type="map:Map" href="resource.map#_-HunMEj3Ee-rxcUE0wMtag?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map$name=test?"/>
+</notation:Diagram>
+]]></diagram>
 </map:map>
