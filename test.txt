@@ -1,2 +1,6 @@
 test test
+<<<<<<< HEAD
 thhtyhtyhtyhtyh
+=======
+nyyynytn
+>>>>>>> branch 'main' of git@github.com:THENEXTAFE/test_git_semarchy_xdi.git
