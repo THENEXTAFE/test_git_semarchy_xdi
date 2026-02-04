@@ -13,7 +13,7 @@
     <configuration id="_XFQiqQGnEfG7UuvkN5pRZQ" name="REC">
       <attribute defType="com.stambia.rdbms.schema.name" id="_XFQiqgGnEfG7UuvkN5pRZQ" value="HOTEL_DATAMART_REC"/>
     </configuration>
-    <node defType="com.stambia.rdbms.datastore" id="_XFQiqwGnEfG7UuvkN5pRZQ" name="DIM_DISCOUNT2">
+    <node defType="com.stambia.rdbms.datastore" id="_XFQiqwGnEfG7UuvkN5pRZQ" name="DIM_DISCOUNT">
       <attribute defType="com.stambia.rdbms.datastore.name" id="_XFQirAGnEfG7UuvkN5pRZQ" value="DIM_DISCOUNT2"/>
       <attribute defType="com.stambia.rdbms.datastore.type" id="_XFQirQGnEfG7UuvkN5pRZQ" value="TABLE"/>
       <node defType="com.stambia.rdbms.column" id="_XFQirgGnEfG7UuvkN5pRZQ" name="DIS_RANGE" position="1">
