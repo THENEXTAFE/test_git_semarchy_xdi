@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<md:node xmlns:md="http://www.stambia.com/md" defType="com.stambia.rdbms.server" id="_buPYkAGqEfG7UuvkN5pRZQ" name="Datamart_emf2" md:ref="resource.md#UUID_MD_RDBMS_HYPERSONIC_SQL?fileId=UUID_MD_RDBMS_HYPERSONIC_SQL$type=md$name=Hypersonic%20SQL?" internalVersion="v2.0.0">
+<md:node xmlns:md="http://www.stambia.com/md" defType="com.stambia.rdbms.server" id="_buPYkAGqEfG7UuvkN5pRZQ" name="Datamart" md:ref="resource.md#UUID_MD_RDBMS_HYPERSONIC_SQL?fileId=UUID_MD_RDBMS_HYPERSONIC_SQL$type=md$name=Hypersonic%20SQL?" internalVersion="v2.0.0">
   <attribute defType="com.stambia.rdbms.server.module" id="_buPYkQGqEfG7UuvkN5pRZQ" value="HSQL"/>
   <attribute defType="com.stambia.rdbms.server.user" id="_buPYkgGqEfG7UuvkN5pRZQ" value="sa"/>
   <attribute defType="com.stambia.rdbms.server.driver" id="_buPYkwGqEfG7UuvkN5pRZQ" value="org.hsqldb.jdbcDriver"/>
   <attribute defType="com.stambia.rdbms.server.designerAutoCommit" id="_buPYlAGqEfG7UuvkN5pRZQ" value="true"/>
   <attribute defType="com.stambia.rdbms.server.url" id="_buPYlQGqEfG7UuvkN5pRZQ" value="jdbc:hsqldb:hsql://localhost:62211"/>
-  <node defType="com.stambia.rdbms.schema" id="_Tv_K8D7nEfGCvs4hR2TxhA" name="HOTEL_DATAMART_test">
+  <node defType="com.stambia.rdbms.schema" id="_Tv_K8D7nEfGCvs4hR2TxhA" name="HOTEL_DATAMART">
     <attribute defType="com.stambia.rdbms.schema.name" id="_TxhcAD7nEfGCvs4hR2TxhA" value="HOTEL_DATAMART"/>
     <attribute defType="com.stambia.rdbms.schema.rejectMask" id="_TxjRMD7nEfGCvs4hR2TxhA" value="R_[targetName]"/>
     <attribute defType="com.stambia.rdbms.schema.loadMask" id="_TxjRMT7nEfGCvs4hR2TxhA" value="L[number]_[targetName]"/>
