@@ -88,6 +88,36 @@
     <constraint id="_xKNs8D7qEfGCvs4hR2TxhA" name="PK_DIM_DISCOUNT" ref="resource.md#_Vgb2TT7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=PK_DIM_DISCOUNT?" reject="true"/>
     <setDescriptor id="_xvyfMD7qEfGCvs4hR2TxhA" label="A"/>
   </datastore>
+<datastore id="_M9090D7rEfGCvs4fezfezA" alias="DIM_CUSTOMER_TEST" dataset="_M9_88D7rEfGCvs4hR2TxhA" ref="resource.md#_VgccPD7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=DIM_CUSTOMER?" subExpression="[A]">
+    <field id="_M985oD7rEfGCvs4hR2TxhA" enable="true" insert="true" name="CUS_COMPANY" ref="resource.md#_VgccVT7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_COMPANY?" update="true">
+      <expression id="_NbtzsD7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression>T_EMAIL.EML_TYPE</expression>
+      </expression>
+    </field>
+    <field id="_M95PQT7rEfGCvs4hR2TxhA" enable="true" insert="true" name="CUS_ID" ref="resource.md#_VgccPz7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_ID?" update="true" updateKey="true">
+      <expression id="_Nbtzsj7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression>T_CUSTOMER.CUS_ID</expression>
+      </expression>
+    </field>
+    <field id="_M985oT7rEfGCvs4hR2TxhA" enable="true" insert="true" name="GEO_KEY_ID" ref="resource.md#_VgccXD7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=GEO_KEY_ID?" update="true">
+      <expression id="_NbuawD7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression>T_BILLING_LINES.BDR_ID</expression>
+      </expression>
+    </field>
+    <field id="_M97EcD7rEfGCvs4hR2TxhA" name="CUS_TITLE" ref="resource.md#_VgccRz7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_TITLE?">
+      <expression id="_NbuawT7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression></expression>
+      </expression>
+    </field>
+    <field id="_M97EcT7rEfGCvs4hR2TxhA" enable="true" insert="true" name="CUS_NAME" ref="resource.md#_VgccTj7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_NAME?" update="true">
+      <expression id="_Nbuawj7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression>T_PHONE_TYPE.PHT_NAME</expression>
+      </expression>
+    </field>
+    <constraint id="_M9_V4D7rEfGCvs4hR2TxhA" name="PK_DIM_CUSTOMER" ref="resource.md#_Vgcccz7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=PK_DIM_CUSTOMER?" reject="true"/>
+    <constraint id="_M9_V4T7rEfGCvs4hR2TxhA" name="FK_DIM_CUSTOMER_GEO" ref="resource.md#_Vgccdj7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=FK_DIM_CUSTOMER_GEO?" reject="true"/>
+    <setDescriptor id="_NbtMoD7rEfGCvs4hR2TxhA" label="A"/>
+  </datastore>
   <join id="_KiNh4D7pEfGCvs4hR2TxhA" location="SRC" joinType="Left_Join" left="_KJjKQD7pEfGCvs4hR2TxhA" order="10" right="_Jq5fYD7pEfGCvs4hR2TxhA">
     <expression>T_CUSTOMER.CUS_ID = T_PHONE.CUS_ID</expression>
   </join>
