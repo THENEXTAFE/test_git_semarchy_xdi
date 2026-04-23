@@ -88,6 +88,46 @@
     <constraint id="_xKNs8D7qEfGCvs4hR2TxhA" name="PK_DIM_DISCOUNT" ref="resource.md#_Vgb2TT7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=PK_DIM_DISCOUNT?" reject="true"/>
     <setDescriptor id="_xvyfMD7qEfGCvs4hR2TxhA" label="A"/>
   </datastore>
+  <datastore id="_M9090D7rEfGCvs4hR2TxhA" alias="DIM_CUSTOMER" dataset="_M9_88D7rEfGCvs4hR2TxhA" ref="resource.md#_VgccPD7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=DIM_CUSTOMER?" subExpression="[A]">
+    <field id="_M985oD7rEfGCvs4hR2TxhA" enable="true" insert="true" name="CUS_COMPANY" ref="resource.md#_VgccVT7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_COMPANY?" update="true">
+      <expression id="_NbtzsD7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression>T_EMAIL.EML_TYPE</expression>
+      </expression>
+    </field>
+    <field id="_M99gsD7rEfGCvs4hR2TxhA" name="CUS_VIP" ref="resource.md#_VgccZD7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_VIP?">
+      <expression id="_NbtzsT7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression></expression>
+      </expression>
+    </field>
+    <field id="_M95PQT7rEfGCvs4hR2TxhA" enable="true" insert="true" name="CUS_ID" ref="resource.md#_VgccPz7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_ID?" update="true" updateKey="true">
+      <expression id="_Nbtzsj7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression>T_CUSTOMER.CUS_ID</expression>
+      </expression>
+    </field>
+    <field id="_M985oT7rEfGCvs4hR2TxhA" enable="true" insert="true" name="GEO_KEY_ID" ref="resource.md#_VgccXD7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=GEO_KEY_ID?" update="true">
+      <expression id="_NbuawD7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression>T_BILLING_LINES.BDR_ID</expression>
+      </expression>
+    </field>
+    <field id="_M97EcD7rEfGCvs4hR2TxhA" name="CUS_TITLE" ref="resource.md#_VgccRz7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_TITLE?">
+      <expression id="_NbuawT7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression></expression>
+      </expression>
+    </field>
+    <field id="_M97EcT7rEfGCvs4hR2TxhA" enable="true" insert="true" name="CUS_NAME" ref="resource.md#_VgccTj7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=CUS_NAME?" update="true">
+      <expression id="_Nbuawj7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression>T_PHONE_TYPE.PHT_NAME</expression>
+      </expression>
+    </field>
+    <field id="_M9-HwD7rEfGCvs4hR2TxhA" name="UPDATE_DATE" ref="resource.md#_VgccbD7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=UPDATE_DATE?">
+      <expression id="_Nbuawz7rEfGCvs4hR2TxhA" setDescriptorRef="_NbtMoD7rEfGCvs4hR2TxhA">
+        <expression></expression>
+      </expression>
+    </field>
+    <constraint id="_M9_V4D7rEfGCvs4hR2TxhA" name="PK_DIM_CUSTOMER" ref="resource.md#_Vgcccz7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=PK_DIM_CUSTOMER?" reject="true"/>
+    <constraint id="_M9_V4T7rEfGCvs4hR2TxhA" name="FK_DIM_CUSTOMER_GEO" ref="resource.md#_Vgccdj7nEfGCvs4hR2TxhA?fileId=_buPYkAGqEfG7UuvkN5pRZQ$type=md$name=FK_DIM_CUSTOMER_GEO?" reject="true"/>
+    <setDescriptor id="_NbtMoD7rEfGCvs4hR2TxhA" label="A"/>
+  </datastore>
   <join id="_KiNh4D7pEfGCvs4hR2TxhA" location="SRC" joinType="Left_Join" left="_KJjKQD7pEfGCvs4hR2TxhA" order="10" right="_Jq5fYD7pEfGCvs4hR2TxhA">
     <expression>T_CUSTOMER.CUS_ID = T_PHONE.CUS_ID</expression>
   </join>
@@ -106,9 +146,9 @@
   <join id="_wqDmMD7qEfGCvs4hR2TxhA" location="SRC" left="_v6fKcD7qEfGCvs4hR2TxhA" order="110" right="_KJjKQD7pEfGCvs4hR2TxhA">
     <expression>T_BEDROOM.BDR_ID = T_CUSTOMER.CUS_ID</expression>
   </join>
-  <template id="_QtyTUD7pEfGCvs4hR2TxhA" name="I_DIM_CUSTOMER" process="resource.proc#_HFOfdjEZEd-WZe6cNi2k2w?fileId=_HFOfdjEZEd-WZe6cNi2k2w$type=proc$name=INTEGRATION%20Hsql?" targetId="_QLdCUD7pEfGCvs4hR2TxhA"/>
-  <template id="_Qu67wD7pEfGCvs4hR2TxhA" name="L1_DIM_CUSTOMER_DIM_DISCOUNT" process="resource.proc#_aafbe681-11ab-4ebc-ab56-de794128c580?fileId=_aafbe681-11ab-4ebc-ab56-de794128c580$type=proc$name=LOAD%20Rdbms%20to%20Rdbms?" sourceId="_Jq5fYD7pEfGCvs4hR2TxhA _KJjKQD7pEfGCvs4hR2TxhA _J5RSkD7pEfGCvs4hR2TxhA _MEZGUD7pEfGCvs4hR2TxhA _MvvwcD7pEfGCvs4hR2TxhA _NCmbAD7pEfGCvs4hR2TxhA _v6fKcD7qEfGCvs4hR2TxhA" targetId="_QLdCUD7pEfGCvs4hR2TxhA _xKINYD7qEfGCvs4hR2TxhA"/>
   <template id="_xv9eUD7qEfGCvs4hR2TxhA" name="I_DIM_DISCOUNT" process="resource.proc#_HFOfdjEZEd-WZe6cNi2k2w?fileId=_HFOfdjEZEd-WZe6cNi2k2w$type=proc$name=INTEGRATION%20Hsql?" targetId="_xKINYD7qEfGCvs4hR2TxhA"/>
+  <template id="_M-EOYD7rEfGCvs4hR2TxhA" name="L1_DIM_CUSTOMER_DIM_DISCOUNT" process="resource.proc#_aafbe681-11ab-4ebc-ab56-de794128c580?fileId=_aafbe681-11ab-4ebc-ab56-de794128c580$type=proc$name=LOAD%20Rdbms%20to%20Rdbms?" sourceId="_MvvwcD7pEfGCvs4hR2TxhA _Jq5fYD7pEfGCvs4hR2TxhA _J5RSkD7pEfGCvs4hR2TxhA _KJjKQD7pEfGCvs4hR2TxhA _v6fKcD7qEfGCvs4hR2TxhA _NCmbAD7pEfGCvs4hR2TxhA _MEZGUD7pEfGCvs4hR2TxhA" targetId="_xKINYD7qEfGCvs4hR2TxhA _M9090D7rEfGCvs4hR2TxhA"/>
+  <template id="_Nb0hYD7rEfGCvs4hR2TxhA" name="I_DIM_CUSTOMER" process="resource.proc#_HFOfdjEZEd-WZe6cNi2k2w?fileId=_HFOfdjEZEd-WZe6cNi2k2w$type=proc$name=INTEGRATION%20Hsql?" targetId="_M9090D7rEfGCvs4hR2TxhA"/>
   <dataSet id="_JrEegD7pEfGCvs4hR2TxhA">
     <container>_Jq5fYD7pEfGCvs4hR2TxhA</container>
     <container>_KJjKQD7pEfGCvs4hR2TxhA</container>
@@ -121,6 +161,9 @@
   <dataSet id="_QLllMD7pEfGCvs4hR2TxhA"/>
   <dataSet id="_xKO7ED7qEfGCvs4hR2TxhA">
     <container>_xKINYD7qEfGCvs4hR2TxhA</container>
+  </dataSet>
+  <dataSet id="_M9_88D7rEfGCvs4hR2TxhA">
+    <container>_M9090D7rEfGCvs4hR2TxhA</container>
   </dataSet>
   <hint>
     <usedField>#_JrA0ID7pEfGCvs4hR2TxhA</usedField>
@@ -294,26 +337,6 @@
     <element xmi:type="map:Datastore" href="resource.map#_NCmbAD7pEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NDBRwT7pEfGCvs4hR2TxhA" x="646" y="310"/>
   </children>
-  <children xmi:type="notation:Shape" xmi:id="_QL6VUD7pEfGCvs4hR2TxhA" type="2004" fontName="Segoe UI">
-    <children xmi:type="notation:DecorationNode" xmi:id="_QL6VUj7pEfGCvs4hR2TxhA" type="5005"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_QL6VUz7pEfGCvs4hR2TxhA" type="5007"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_QL6VVD7pEfGCvs4hR2TxhA" type="7003"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_QL6VVT7pEfGCvs4hR2TxhA" type="7009"/>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_QL6VVj7pEfGCvs4hR2TxhA" type="7004">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_QL6VVz7pEfGCvs4hR2TxhA"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_QL6VWD7pEfGCvs4hR2TxhA"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_QL6VWT7pEfGCvs4hR2TxhA" type="5009">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_QL6VWj7pEfGCvs4hR2TxhA"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_QL6VWz7pEfGCvs4hR2TxhA" type="7005">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_QL6VXD7pEfGCvs4hR2TxhA"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_QL6VXT7pEfGCvs4hR2TxhA"/>
-    </children>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_QL6VXj7pEfGCvs4hR2TxhA" type="7007"/>
-    <element xmi:type="map:Datastore" href="resource.map#_QLdCUD7pEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QL6VUT7pEfGCvs4hR2TxhA" x="991" y="134"/>
-  </children>
   <children xmi:type="notation:Shape" xmi:id="_v7l9sD7qEfGCvs4hR2TxhA" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_v7l9sj7qEfGCvs4hR2TxhA" type="5005"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_v7l9sz7qEfGCvs4hR2TxhA" type="5007"/>
@@ -361,6 +384,26 @@
     <element xmi:type="map:Datastore" href="resource.map#_xKINYD7qEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xKy7wT7qEfGCvs4hR2TxhA" x="1016" y="340"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_M-j9oD7rEfGCvs4hR2TxhA" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_M-kksD7rEfGCvs4hR2TxhA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_M-kksT7rEfGCvs4hR2TxhA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_M-kksj7rEfGCvs4hR2TxhA" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_M-kksz7rEfGCvs4hR2TxhA" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_M-kktD7rEfGCvs4hR2TxhA" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_M-kktT7rEfGCvs4hR2TxhA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_M-kktj7rEfGCvs4hR2TxhA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_M-kktz7rEfGCvs4hR2TxhA" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_M-kkuD7rEfGCvs4hR2TxhA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_M-kkuT7rEfGCvs4hR2TxhA" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_M-kkuj7rEfGCvs4hR2TxhA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_M-kkuz7rEfGCvs4hR2TxhA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_M-kkvD7rEfGCvs4hR2TxhA" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_M9090D7rEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_M-j9oT7rEfGCvs4hR2TxhA" x="1015" y="135"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_sndZ4UK3EfCUOZaSvDz28w"/>
   <element xmi:type="map:Map" href="resource.map#_-HunMEj3Ee-rxcUE0wMtag?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map$name=test?"/>
   <edges xmi:type="notation:Edge" xmi:id="_KmEuMD7pEfGCvs4hR2TxhA" type="joinLink" source="_Klth0D7pEfGCvs4hR2TxhA" target="_KJxzwD7pEfGCvs4hR2TxhA">
@@ -403,30 +446,6 @@
     <element xsi:nil="true"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Nw_yEz7pEfGCvs4hR2TxhA" points="[-17, 4, 124, -159]$[-78, 108, 63, -55]$[-141, 163, 0, 0]"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_QusSQD7pEfGCvs4hR2TxhA" type="targetLink" source="_QL6VUD7pEfGCvs4hR2TxhA" target="_KJxzwD7pEfGCvs4hR2TxhA">
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QusSQT7pEfGCvs4hR2TxhA" points="[-87, 3, 867, -30]$[-861, 30, 93, -3]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_QuwjsD7pEfGCvs4hR2TxhA" type="targetDataSetLink" source="_QL6VUD7pEfGCvs4hR2TxhA" target="_QL6VUD7pEfGCvs4hR2TxhA">
-    <element xmi:type="map:DataSet" href="resource.map#_JrEegD7pEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QuwjsT7pEfGCvs4hR2TxhA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_Quxx0D7pEfGCvs4hR2TxhA" type="targetSetLink" source="_QL6VUD7pEfGCvs4hR2TxhA" target="_QL6VUD7pEfGCvs4hR2TxhA">
-    <element xmi:type="map:SetDescriptor" href="resource.map#_QtmtID7pEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Quxx0T7pEfGCvs4hR2TxhA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_TP7f8D7pEfGCvs4hR2TxhA" type="targetLink" source="_QL6VUD7pEfGCvs4hR2TxhA" target="_J5VkAD7pEfGCvs4hR2TxhA">
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TP7f8T7pEfGCvs4hR2TxhA" points="[-136, -40, 269, 78]$[-329, -96, 76, 22]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_TwwVED7pEfGCvs4hR2TxhA" type="targetLink" source="_QL6VUD7pEfGCvs4hR2TxhA" target="_MExg0D7pEfGCvs4hR2TxhA">
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TwwVET7pEfGCvs4hR2TxhA" points="[-165, 7, 564, -26]$[-616, 28, 113, -5]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_Uoo_UD7pEfGCvs4hR2TxhA" type="targetLink" source="_QL6VUD7pEfGCvs4hR2TxhA" target="_NDBRwD7pEfGCvs4hR2TxhA">
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Uoo_UT7pEfGCvs4hR2TxhA" points="[-163, 76, 233, -108]$[-282, 131, 114, -53]"/>
-  </edges>
   <edges xmi:type="notation:Edge" xmi:id="_wq8XAD7qEfGCvs4hR2TxhA" type="joinLink" source="_wq7I4D7qEfGCvs4hR2TxhA" target="_v7l9sD7qEfGCvs4hR2TxhA">
     <element xsi:nil="true"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wq8XAT7qEfGCvs4hR2TxhA" points="[-1, -1, -187, -537]$[154, 445, -32, -91]"/>
@@ -446,6 +465,30 @@
   <edges xmi:type="notation:Edge" xmi:id="_xwrQAj7qEfGCvs4hR2TxhA" type="targetSetLink" source="_xKy7wD7qEfGCvs4hR2TxhA" target="_xKy7wD7qEfGCvs4hR2TxhA">
     <element xmi:type="map:SetDescriptor" href="resource.map#_xvyfMD7qEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xwrQAz7qEfGCvs4hR2TxhA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_NcR0YD7rEfGCvs4hR2TxhA" type="targetLink" source="_M-j9oD7rEfGCvs4hR2TxhA" target="_KJxzwD7pEfGCvs4hR2TxhA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NcR0YT7rEfGCvs4hR2TxhA" points="[-87, 3, 891, -29]$[-885, 29, 93, -3]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_NcTCgD7rEfGCvs4hR2TxhA" type="targetDataSetLink" source="_M-j9oD7rEfGCvs4hR2TxhA" target="_M-j9oD7rEfGCvs4hR2TxhA">
+    <element xmi:type="map:DataSet" href="resource.map#_JrEegD7pEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NcTCgT7rEfGCvs4hR2TxhA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_NcTCgj7rEfGCvs4hR2TxhA" type="targetSetLink" source="_M-j9oD7rEfGCvs4hR2TxhA" target="_M-j9oD7rEfGCvs4hR2TxhA">
+    <element xmi:type="map:SetDescriptor" href="resource.map#_NbtMoD7rEfGCvs4hR2TxhA?fileId=_-HunMEj3Ee-rxcUE0wMtag$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_NcTCgz7rEfGCvs4hR2TxhA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Npd70D7rEfGCvs4hR2TxhA" type="targetLink" source="_M-j9oD7rEfGCvs4hR2TxhA" target="_J5VkAD7pEfGCvs4hR2TxhA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Npd70T7rEfGCvs4hR2TxhA" points="[-136, -38, 293, 81]$[-353, -98, 76, 21]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_OEBJ0D7rEfGCvs4hR2TxhA" type="targetLink" source="_M-j9oD7rEfGCvs4hR2TxhA" target="_MExg0D7pEfGCvs4hR2TxhA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OEBJ0T7rEfGCvs4hR2TxhA" points="[-165, 7, 588, -25]$[-640, 27, 113, -5]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_OmxRkD7rEfGCvs4hR2TxhA" type="targetLink" source="_M-j9oD7rEfGCvs4hR2TxhA" target="_NDBRwD7pEfGCvs4hR2TxhA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OmxRkT7rEfGCvs4hR2TxhA" points="[-165, 72, 255, -111]$[-306, 133, 114, -50]"/>
   </edges>
 </notation:Diagram>
 ]]></diagram>
