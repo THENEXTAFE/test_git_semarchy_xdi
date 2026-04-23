@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<md:node xmlns:md="http://www.stambia.com/md" defType="com.stambia.rdbms.server" id="_buPYkAGqEfG7UuvkN5pRZQ" name="Datamart_emf" md:ref="resource.md#UUID_MD_RDBMS_HYPERSONIC_SQL?fileId=UUID_MD_RDBMS_HYPERSONIC_SQL$type=md$name=Hypersonic%20SQL?" internalVersion="v2.0.0">
+<md:node xmlns:md="http://www.stambia.com/md" defType="com.stambia.rdbms.server" id="_buPYkAGqEfG7UuvkN5pRZQ" name="Datamart_emf2" md:ref="resource.md#UUID_MD_RDBMS_HYPERSONIC_SQL?fileId=UUID_MD_RDBMS_HYPERSONIC_SQL$type=md$name=Hypersonic%20SQL?" internalVersion="v2.0.0">
   <attribute defType="com.stambia.rdbms.server.module" id="_buPYkQGqEfG7UuvkN5pRZQ" value="HSQL"/>
   <attribute defType="com.stambia.rdbms.server.user" id="_buPYkgGqEfG7UuvkN5pRZQ" value="sa"/>
   <attribute defType="com.stambia.rdbms.server.driver" id="_buPYkwGqEfG7UuvkN5pRZQ" value="org.hsqldb.jdbcDriver"/>
